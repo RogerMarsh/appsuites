@@ -1,0 +1,16 @@
+# './UpgradeCResults' will do 'python -m chessresults.tools.upgrade_3_to_4'
+# './UpgradeCResultsDB 3.6' will do:
+    'python3.6 -m chessresults.tools.upgrade_3_to_4'
+mkdir _runapp
+#ln -s $PWD/chesscalc/chesscalc _runapp
+ln -s $PWD/chessresults/chessresults _runapp
+#ln -s $PWD/emailextract/emailextract _runapp
+#ln -s $PWD/emailstore/emailstore _runapp
+ln -s $PWD/solentware_base/solentware_base _runapp
+ln -s $PWD/solentware_grid/solentware_grid _runapp
+ln -s $PWD/solentware_misc/solentware_misc _runapp
+cd _runapp
+python$1 -m chessresults.tools.upgrade_3_to_4
+cd ..
+rm -r _runapp
+
