@@ -1,0 +1,20 @@
+### Makefile to build release component source distribution
+
+PATH_TO_PYTHON ?= C:
+PYTHON_VERSION ?= 38
+PYTHON_VERSION_UNIX ?= 3.8
+SDIST_FORMATS ?= zip,gztar
+DIST_DIR ?= ../dist
+
+### Targets
+
+.PHONY : all windows unix
+
+all:
+	@echo "Use target windows or unix depending on platform running make"
+
+windows:
+	$(PATH_TO_PYTHON)/Python$(PYTHON_VERSION)/Python setup.py sdist --formats $(SDIST_FORMATS) --dist-dir $(DIST_DIR)
+
+unix:
+	python$(PYTHON_VERSION_UNIX) setup.py sdist --formats $(SDIST_FORMATS) --dist-dir $(DIST_DIR)
