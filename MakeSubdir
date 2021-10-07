@@ -1,20 +1,26 @@
-### Makefile to build release component source distribution
+### Makefile to build source and wheel distributions for project.
 
-PATH_TO_PYTHON ?= C:
-PYTHON_VERSION ?= 38
+PATH_TO_PYTHON ?= C:/Users/$(USERNAME)/AppData/Local/Programs/Python
+PYTHON_VERSION ?= 38-64
 PYTHON_VERSION_UNIX ?= 3.8
-SDIST_FORMATS ?= zip,gztar
+SDIST_FORMATS ?= gztar
 DIST_DIR ?= ../dist
 
 ### Targets
 
-.PHONY : all windows unix
+.PHONY : all setup-windows setup-unix build-windows build-unix
 
 all:
-	@echo "Use target windows or unix depending on platform running make"
+	@echo "Targets are build-unix build-windows setup-unix setup-windows"
 
-windows:
-	$(PATH_TO_PYTHON)/Python$(PYTHON_VERSION)/Python setup.py sdist --formats $(SDIST_FORMATS) --dist-dir $(DIST_DIR)
+build-windows:
+	$(PATH_TO_PYTHON)/Python$(PYTHON_VERSION)/python -m build --outdir $(DIST_DIR) --no-isolation
 
-unix:
+build-unix:
+	python$(PYTHON_VERSION_UNIX) -m build --outdir $(DIST_DIR) --no-isolation
+
+setup-windows:
+	$(PATH_TO_PYTHON)/Python$(PYTHON_VERSION)/python setup.py sdist --formats $(SDIST_FORMATS) --dist-dir $(DIST_DIR)
+
+setup-unix:
 	python$(PYTHON_VERSION_UNIX) setup.py sdist --formats $(SDIST_FORMATS) --dist-dir $(DIST_DIR)

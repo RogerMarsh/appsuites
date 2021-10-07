@@ -1,9 +1,9 @@
-### Makefile to build source release on Windows or Unix platform
+### Makefile to build source and wheel distributions on Windows or Unix platforms.
 
-PATH_TO_PYTHON ?= C:
-PYTHON_VERSION ?= 38
+PATH_TO_PYTHON ?= C:/Users/$(USERNAME)/AppData/Local/Programs/Python
+PYTHON_VERSION ?= 38-64
 PYTHON_VERSION_UNIX ?= 3.8
-SDIST_FORMATS ?= zip,gztar
+SDIST_FORMATS ?= gztar
 DIST_DIR ?= ../dist
 
 ### Collect settings for MakeSubdir
@@ -16,35 +16,67 @@ PYTHON_SETTINGS += DIST_DIR=$(DIST_DIR)
 
 ### Targets
 
-.PHONY : all windows unix
+.PHONY : all setup-windows setup-unix build-windows build-unix windows unix
 
 all:
 	@echo "Use target windows or unix depending on platform running make"
 
-windows:
-### Source distributions
-	cd solentware_base; make -f ../MakeSubdir windows $(PYTHON_SETTINGS)
-	cd chesscalc; make -f ../MakeSubdir windows $(PYTHON_SETTINGS)
-	cd chesstab; make -f ../MakeSubdir windows $(PYTHON_SETTINGS)
-	cd chessql; make -f ../MakeSubdir windows $(PYTHON_SETTINGS)
-	cd emailstore; make -f ../MakeSubdir windows $(PYTHON_SETTINGS)
-	cd emailextract; make -f ../MakeSubdir windows $(PYTHON_SETTINGS)
-	cd pgn_read; make -f ../MakeSubdir windows $(PYTHON_SETTINGS)
-	cd chessresults; make -f ../MakeSubdir windows $(PYTHON_SETTINGS)
-	cd solentware_grid; make -f ../MakeSubdir windows $(PYTHON_SETTINGS)
-	cd solentware_misc; make -f ../MakeSubdir windows $(PYTHON_SETTINGS)
-	cd uci_net; make -f ../MakeSubdir windows $(PYTHON_SETTINGS)
+windows:	build-windows
 
-unix:
-### Source distributions
-	cd solentware_base; make -f ../MakeSubdir unix $(PYTHON_SETTINGS)
-	cd chesscalc; make -f ../MakeSubdir unix $(PYTHON_SETTINGS)
-	cd chesstab; make -f ../MakeSubdir unix $(PYTHON_SETTINGS)
-	cd chessql; make -f ../MakeSubdir unix $(PYTHON_SETTINGS)
-	cd emailstore; make -f ../MakeSubdir unix $(PYTHON_SETTINGS)
-	cd emailextract; make -f ../MakeSubdir unix $(PYTHON_SETTINGS)
-	cd pgn_read; make -f ../MakeSubdir unix $(PYTHON_SETTINGS)
-	cd chessresults; make -f ../MakeSubdir unix $(PYTHON_SETTINGS)
-	cd solentware_grid; make -f ../MakeSubdir unix $(PYTHON_SETTINGS)
-	cd solentware_misc; make -f ../MakeSubdir unix $(PYTHON_SETTINGS)
-	cd uci_net; make -f ../MakeSubdir unix $(PYTHON_SETTINGS)
+unix:	build-unix
+
+build-windows:
+### Distributions built with 'python -m build ...' on Windows
+	cd solentware_base; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd chesscalc; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd chesstab; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd chessql; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd emailstore; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd emailextract; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd pgn_read; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd chessresults; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd solentware_grid; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd solentware_misc; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd uci_net; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+
+build-unix:
+### Distributions built with 'python -m build ...' on Unix
+	cd solentware_base; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd chesscalc; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd chesstab; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd chessql; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd emailstore; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd emailextract; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd pgn_read; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd chessresults; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd solentware_grid; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd solentware_misc; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd uci_net; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+
+setup-windows:
+### Source distributions built with 'python setup.py ...' on Unix
+	cd solentware_base; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd chesscalc; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd chesstab; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd chessql; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd emailstore; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd emailextract; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd pgn_read; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd chessresults; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd solentware_grid; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd solentware_misc; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd uci_net; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+
+setup-unix:
+### Source distributions built with 'python setup.py ...' on Unix
+	cd solentware_base; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd chesscalc; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd chesstab; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd chessql; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd emailstore; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd emailextract; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd pgn_read; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd chessresults; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd solentware_grid; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd solentware_misc; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd uci_net; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)

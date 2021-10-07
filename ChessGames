@@ -1,5 +1,5 @@
-# './ChessTab' will do 'python -m chesstab.chessgames'
-# './ChessTab 3.6' will do 'python3.6 -m chesstab.chessgames'
+# './ChessGames' will do 'python -m chesstab.chessgames'
+# './ChessGames 3.6' will do 'python3.6 -m chesstab.chessgames'
 # $2 is argument to switch NoSQL engines on.
 mkdir _runchesstab
 ln -s $PWD/chessql/chessql _runchesstab
