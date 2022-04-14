@@ -1,7 +1,10 @@
 chesscalc
 chessql
 chessresults
+chesssubmit
 chesstab
+chesstabular
+chessvalidate
 emailextract
 emailstore
 pgn_read
