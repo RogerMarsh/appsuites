@@ -1,15 +1,15 @@
 # './UpgradeCTab' will do 'python -m chesstab.tools.upgrade_3_to_4'
 # './UpgradeCTab 3.6' will do 'python3.6 -m chesstab.tools.upgrade_3_to_4'
-mkdir _runapp
-#ln -s $PWD/chessql/chessql _runapp
-ln -s $PWD/chesstab/chesstab _runapp
-#ln -s $PWD/pgn_read/pgn_read _runapp
-ln -s $PWD/solentware_base/solentware_base _runapp
-ln -s $PWD/solentware_grid/solentware_grid _runapp
-ln -s $PWD/solentware_misc/solentware_misc _runapp
-#ln -s $PWD/uci_net/uci_net _runapp
-cd _runapp
+mkdir _runupgradectab
+#ln -s $PWD/chessql/chessql _runupgradectab
+ln -s $PWD/chesstab/chesstab _runupgradectab
+#ln -s $PWD/pgn_read/pgn_read _runupgradectab
+ln -s $PWD/solentware_base/solentware_base _runupgradectab
+ln -s $PWD/solentware_grid/solentware_grid _runupgradectab
+ln -s $PWD/solentware_misc/solentware_misc _runupgradectab
+#ln -s $PWD/uci_net/uci_net _runupgradectab
+cd _runupgradectab
 python$1 -m chesstab.tools.upgrade_3_to_4
 cd ..
-rm -r _runapp
+rm -r _runupgradectab
 

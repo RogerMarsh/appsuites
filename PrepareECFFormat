@@ -1,11 +1,11 @@
 # './PrepareECFFormat' will do 'python -m chessresults.prepare_ecf_format'
 # './PrepareECFFormat 3.6' will do
 #                  'python3.6 -m chessresults.prepare_ecf_format'
-mkdir _runchessprepare
-ln -s $PWD/chessresults/chessresults _runchessprepare
-ln -s $PWD/solentware_misc/solentware_misc _runchessprepare
-cd _runchessprepare
+mkdir _runprepareecfformat
+ln -s $PWD/chessresults/chessresults _runprepareecfformat
+ln -s $PWD/solentware_misc/solentware_misc _runprepareecfformat
+cd _runprepareecfformat
 python$1 -m chessresults.prepare_ecf_format
 cd ..
-rm -r _runchessprepare
+rm -r _runprepareecfformat
 

@@ -1,16 +1,15 @@
-# './ChessResultsECF' will do 'python -m chessresults.results_ecf'
-# './ChessResultsECF 3.6' will do 'python3.6 -m chessresults.results_ecf'
-# $2 is argument to switch NoSQL engines on.
-mkdir _runchessresults
-ln -s $PWD/chesscalc/chesscalc _runchessresults
-ln -s $PWD/chessresults/chessresults _runchessresults
-ln -s $PWD/emailextract/emailextract _runchessresults
-ln -s $PWD/emailstore/emailstore _runchessresults
-ln -s $PWD/solentware_base/solentware_base _runchessresults
-ln -s $PWD/solentware_grid/solentware_grid _runchessresults
-ln -s $PWD/solentware_misc/solentware_misc _runchessresults
-cd _runchessresults
-python$1 -m chessresults.results_ecf $1 $2
+# './ValidateResults' will do 'python -m chessvalidate.validate'
+# './ValidateResults 3.6' will do 'python3.6 -m chessvalidate.validate'
+mkdir _runvalidateresults
+ln -s $PWD/chesscalc/chesscalc _runvalidateresults
+ln -s $PWD/chessvalidate/chessvalidate _runvalidateresults
+ln -s $PWD/emailextract/emailextract _runvalidateresults
+ln -s $PWD/emailstore/emailstore _runvalidateresults
+ln -s $PWD/solentware_base/solentware_base _runvalidateresults
+ln -s $PWD/solentware_grid/solentware_grid _runvalidateresults
+ln -s $PWD/solentware_misc/solentware_misc _runvalidateresults
+cd _runvalidateresults
+python$1 -m chessvalidate.validate $1
 cd ..
-rm -r _runchessresults
+rm -r _runvalidateresults
 

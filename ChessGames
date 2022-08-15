@@ -1,16 +1,16 @@
 # './ChessGames' will do 'python -m chesstab.chessgames'
 # './ChessGames 3.6' will do 'python3.6 -m chesstab.chessgames'
 # $2 is argument to switch NoSQL engines on.
-mkdir _runchesstab
-ln -s $PWD/chessql/chessql _runchesstab
-ln -s $PWD/chesstab/chesstab _runchesstab
-ln -s $PWD/pgn_read/pgn_read _runchesstab
-ln -s $PWD/solentware_base/solentware_base _runchesstab
-ln -s $PWD/solentware_grid/solentware_grid _runchesstab
-ln -s $PWD/solentware_misc/solentware_misc _runchesstab
-ln -s $PWD/uci_net/uci_net _runchesstab
-cd _runchesstab
+mkdir _runchessgames
+ln -s $PWD/chessql/chessql _runchessgames
+ln -s $PWD/chesstab/chesstab _runchessgames
+ln -s $PWD/pgn_read/pgn_read _runchessgames
+ln -s $PWD/solentware_base/solentware_base _runchessgames
+ln -s $PWD/solentware_grid/solentware_grid _runchessgames
+ln -s $PWD/solentware_misc/solentware_misc _runchessgames
+ln -s $PWD/uci_net/uci_net _runchessgames
+cd _runchessgames
 python$1 -m chesstab.chessgames $1 $2
 cd ..
-rm -r _runchesstab
+rm -r _runchessgames
 

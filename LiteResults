@@ -1,16 +1,17 @@
-# './ChessResultsLite' will do 'python -m chessresults.results_lite'
-# './ChessResultsLite 3.6' will do 'python3.6 -m chessresults.results_lite'
+# './LiteResults' will do 'python -m chessresults.results_lite'
+# './LiteResults 3.6' will do 'python3.6 -m chessresults.results_lite'
 # $2 is argument to switch NoSQL engines on.
-mkdir _runchessresults
-ln -s $PWD/chesscalc/chesscalc _runchessresults
-ln -s $PWD/chessresults/chessresults _runchessresults
-ln -s $PWD/emailextract/emailextract _runchessresults
-ln -s $PWD/emailstore/emailstore _runchessresults
-ln -s $PWD/solentware_base/solentware_base _runchessresults
-ln -s $PWD/solentware_grid/solentware_grid _runchessresults
-ln -s $PWD/solentware_misc/solentware_misc _runchessresults
-cd _runchessresults
+mkdir _runliteresults
+ln -s $PWD/chesscalc/chesscalc _runliteresults
+ln -s $PWD/chessvalidate/chessvalidate _runliteresults
+ln -s $PWD/chessresults/chessresults _runliteresults
+ln -s $PWD/emailextract/emailextract _runliteresults
+ln -s $PWD/emailstore/emailstore _runliteresults
+ln -s $PWD/solentware_base/solentware_base _runliteresults
+ln -s $PWD/solentware_grid/solentware_grid _runliteresults
+ln -s $PWD/solentware_misc/solentware_misc _runliteresults
+cd _runliteresults
 python$1 -m chessresults.results_lite $1 $2
 cd ..
-rm -r _runchessresults
+rm -r _runliteresults
 

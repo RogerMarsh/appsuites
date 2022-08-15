@@ -1,10 +1,10 @@
-# './ChessResultsIdentify' will do 'python -m chessresults.identify'
-# './ChessResultsIdentify 3.6' will do 'python3.6 -m chessresults.identify'
-mkdir _runchessidentify
-ln -s $PWD/chessresults/chessresults _runchessidentify
-ln -s $PWD/solentware_misc/solentware_misc _runchessidentify
-cd _runchessidentify
+# './IdentifyPlayers' will do 'python -m chessresults.identify'
+# './IdentifyPlayers 3.6' will do 'python3.6 -m chessresults.identify'
+mkdir _runidentifyplayers
+ln -s $PWD/chessresults/chessresults _runidentifyplayers
+ln -s $PWD/solentware_misc/solentware_misc _runidentifyplayers
+cd _runidentifyplayers
 python$1 -m chessresults.identify
 cd ..
-rm -r _runchessidentify
+rm -r _runidentifyplayers
 

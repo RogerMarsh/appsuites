@@ -2,11 +2,11 @@
 #                  'python -m chessresults.prepare_league_format'
 # './PrepareLeagueFormat 3.6' will do
 #                  'python3.6 -m chessresults.prepare_league_format'
-mkdir _runchessprepare
-ln -s $PWD/chessresults/chessresults _runchessprepare
-ln -s $PWD/solentware_misc/solentware_misc _runchessprepare
-cd _runchessprepare
+mkdir _runprepareleagueformat
+ln -s $PWD/chessresults/chessresults _runprepareleagueformat
+ln -s $PWD/solentware_misc/solentware_misc _runprepareleagueformat
+cd _runprepareleagueformat
 python$1 -m chessresults.prepare_league_format
 cd ..
-rm -r _runchessprepare
+rm -r _runprepareleagueformat
 

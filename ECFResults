@@ -1,16 +1,17 @@
-# './ChessResultsECF' will do 'python -m chessresults.results_ecf'
-# './ChessResultsECF 3.6' will do 'python3.6 -m chessresults.results_ecf'
+# './ECFResults' will do 'python -m chessresults.results_ecf'
+# './ECFResults 3.6' will do 'python3.6 -m chessresults.results_ecf'
 # $2 is argument to switch NoSQL engines on.
-mkdir _runchessresults
-ln -s $PWD/chesscalc/chesscalc _runchessresults
-ln -s $PWD/chessresults/chessresults _runchessresults
-ln -s $PWD/emailextract/emailextract _runchessresults
-ln -s $PWD/emailstore/emailstore _runchessresults
-ln -s $PWD/solentware_base/solentware_base _runchessresults
-ln -s $PWD/solentware_grid/solentware_grid _runchessresults
-ln -s $PWD/solentware_misc/solentware_misc _runchessresults
-cd _runchessresults
+mkdir _runecfresults
+ln -s $PWD/chesscalc/chesscalc _runecfresults
+ln -s $PWD/chessvalidate/chessvalidate _runecfresults
+ln -s $PWD/chessresults/chessresults _runecfresults
+ln -s $PWD/emailextract/emailextract _runecfresults
+ln -s $PWD/emailstore/emailstore _runecfresults
+ln -s $PWD/solentware_base/solentware_base _runecfresults
+ln -s $PWD/solentware_grid/solentware_grid _runecfresults
+ln -s $PWD/solentware_misc/solentware_misc _runecfresults
+cd _runecfresults
 python$1 -m chessresults.results_ecf $1 $2
 cd ..
-rm -r _runchessresults
+rm -r _runecfresults
 
