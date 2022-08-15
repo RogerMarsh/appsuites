@@ -5,6 +5,7 @@ chesssubmit
 chesstab
 chesstabular
 chessvalidate
+ecfformat
 emailextract
 emailstore
 pgn_read

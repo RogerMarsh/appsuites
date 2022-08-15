@@ -1,0 +1,11 @@
+# './HeaderECF' will do 'python -m ecfformat.ecfheader'
+# './HeaderECF 3.6' will do 'python3.6 -m 'ecfformat.ecfheader'
+mkdir _runheaderecf
+ln -s $PWD/ecfformat/ecfformat _runheaderecf
+ln -s $PWD/solentware_base/solentware_base _runheaderecf
+ln -s $PWD/solentware_grid/solentware_grid _runheaderecf
+cd _runheaderecf
+python$1 -m ecfformat.ecfheader $1
+cd ..
+rm -r _runheaderecf
+

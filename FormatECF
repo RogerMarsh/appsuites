@@ -1,0 +1,11 @@
+# './FormatECF' will do 'python -m ecfformat.ecfformat'
+# './FormatECF 3.6' will do 'python3.6 -m 'ecfformat.ecfformat'
+mkdir _runformatecf
+ln -s $PWD/ecfformat/ecfformat _runformatecf
+ln -s $PWD/solentware_base/solentware_base _runformatecf
+ln -s $PWD/solentware_grid/solentware_grid _runformatecf
+cd _runformatecf
+python$1 -m ecfformat.ecfformat $1
+cd ..
+rm -r _runformatecf
+
