@@ -5,6 +5,7 @@ mkdir _runogdresults
 ln -s $PWD/chesscalc/chesscalc _runogdresults
 ln -s $PWD/chessvalidate/chessvalidate _runogdresults
 ln -s $PWD/chessresults/chessresults _runogdresults
+ln -s $PWD/ecfformat/ecfformat _runogdresults
 ln -s $PWD/emailextract/emailextract _runogdresults
 ln -s $PWD/emailstore/emailstore _runogdresults
 ln -s $PWD/solentware_base/solentware_base _runogdresults

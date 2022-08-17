@@ -5,6 +5,7 @@ mkdir _rundatabaseresults
 ln -s $PWD/chesscalc/chesscalc _rundatabaseresults
 ln -s $PWD/chessvalidate/chessvalidate _rundatabaseresults
 ln -s $PWD/chessresults/chessresults _rundatabaseresults
+ln -s $PWD/ecfformat/ecfformat _rundatabaseresults
 ln -s $PWD/emailextract/emailextract _rundatabaseresults
 ln -s $PWD/emailstore/emailstore _rundatabaseresults
 ln -s $PWD/solentware_base/solentware_base _rundatabaseresults

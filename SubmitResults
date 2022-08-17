@@ -4,6 +4,7 @@ mkdir _runsubmitresults
 ln -s $PWD/chesscalc/chesscalc _runsubmitresults
 ln -s $PWD/chessvalidate/chessvalidate _runsubmitresults
 ln -s $PWD/chesssubmit/chesssubmit _runsubmitresults
+ln -s $PWD/ecfformat/ecfformat _runsubmitresults
 ln -s $PWD/emailextract/emailextract _runsubmitresults
 ln -s $PWD/emailstore/emailstore _runsubmitresults
 ln -s $PWD/solentware_base/solentware_base _runsubmitresults

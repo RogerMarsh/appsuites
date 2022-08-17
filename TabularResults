@@ -4,6 +4,7 @@ mkdir _runtabularresults
 ln -s $PWD/chesscalc/chesscalc _runtabularresults
 ln -s $PWD/chessvalidate/chessvalidate _runtabularresults
 ln -s $PWD/chesstabular/chesstabular _runtabularresults
+ln -s $PWD/ecfformat/ecfformat _runtabularresults
 ln -s $PWD/emailextract/emailextract _runtabularresults
 ln -s $PWD/emailstore/emailstore _runtabularresults
 ln -s $PWD/solentware_base/solentware_base _runtabularresults

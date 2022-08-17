@@ -2,6 +2,7 @@
 # './ValidateResults 3.6' will do 'python3.6 -m chessvalidate.validate'
 mkdir _runvalidateresults
 ln -s $PWD/chesscalc/chesscalc _runvalidateresults
+ln -s $PWD/ecfformat/ecfformat _runvalidateresults
 ln -s $PWD/chessvalidate/chessvalidate _runvalidateresults
 ln -s $PWD/emailextract/emailextract _runvalidateresults
 ln -s $PWD/emailstore/emailstore _runvalidateresults
