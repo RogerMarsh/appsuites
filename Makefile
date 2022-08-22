@@ -1,8 +1,8 @@
 ### Makefile to build source and wheel distributions on Windows or Unix platforms.
 
 PATH_TO_PYTHON ?= C:/Users/$(USERNAME)/AppData/Local/Programs/Python
-PYTHON_VERSION ?= 38-64
-PYTHON_VERSION_UNIX ?= 3.8
+PYTHON_VERSION ?= 39-64
+PYTHON_VERSION_UNIX ?= 3.9
 SDIST_FORMATS ?= gztar
 DIST_DIR ?= ../dist
 
@@ -35,6 +35,10 @@ build-windows:
 	cd emailextract; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
 	cd pgn_read; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
 	cd chessresults; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd chesssubmit; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd chesstabular; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd chessvalidate; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd ecfformat; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
 	cd solentware_grid; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
 	cd solentware_misc; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
 	cd uci_net; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
@@ -49,6 +53,10 @@ build-unix:
 	cd emailextract; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd pgn_read; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd chessresults; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd chesssubmit; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd chesstabular; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd chessvalidate; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd ecfformat; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd solentware_grid; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd solentware_misc; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd uci_net; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
@@ -63,6 +71,10 @@ setup-windows:
 	cd emailextract; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
 	cd pgn_read; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
 	cd chessresults; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd chesssubmit; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd chesstabular; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd chessvalidate; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd ecfformat; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
 	cd solentware_grid; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
 	cd solentware_misc; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
 	cd uci_net; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
@@ -77,6 +89,10 @@ setup-unix:
 	cd emailextract; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
 	cd pgn_read; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
 	cd chessresults; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd chesssubmit; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd chesstabular; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd chessvalidate; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd ecfformat; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
 	cd solentware_grid; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
 	cd solentware_misc; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
 	cd uci_net; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
