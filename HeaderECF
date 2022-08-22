@@ -4,6 +4,7 @@ mkdir _runheaderecf
 ln -s $PWD/ecfformat/ecfformat _runheaderecf
 ln -s $PWD/solentware_base/solentware_base _runheaderecf
 ln -s $PWD/solentware_grid/solentware_grid _runheaderecf
+ln -s $PWD/solentware_misc/solentware_misc _runheaderecf
 cd _runheaderecf
 python$1 -m ecfformat.ecfheader $1
 cd ..

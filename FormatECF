@@ -4,6 +4,7 @@ mkdir _runformatecf
 ln -s $PWD/ecfformat/ecfformat _runformatecf
 ln -s $PWD/solentware_base/solentware_base _runformatecf
 ln -s $PWD/solentware_grid/solentware_grid _runformatecf
+ln -s $PWD/solentware_misc/solentware_misc _runformatecf
 cd _runformatecf
 python$1 -m ecfformat.ecfformat $1
 cd ..
