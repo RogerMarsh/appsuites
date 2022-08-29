@@ -1,6 +1,6 @@
-# './RunLinters ^' or './RunLinters \*' will run pylint, pycodestyle,
-# pydocstyle, and 'black --check', on all the project directories in the
-# current working directory.
+# './RunLinters ^' or './RunLinters \*' will run 'pylint --ignore tests',
+# pycodestyle, pydocstyle, and 'black --check', on all project directories
+# in the current working directory.
 # './RunLinters chesstab' will run the four programs on the chesstab project
 # directory in the current working directory.
 # './RunLinters chesstab black' will run 'black --check' on the chesstab
@@ -34,7 +34,7 @@ do
             echo "Run linters on $project"
             if test "$2" == "pylint" -o "$2" == ""; then
                 echo "pylint"
-                pylint $project/$project
+                pylint --ignore tests $project/$project
             fi
             if test "$2" == "pycodestyle" -o "$2" == ""; then
                 echo "pycodestyle"

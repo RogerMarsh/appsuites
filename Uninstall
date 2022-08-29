@@ -1,0 +1,51 @@
+# Uninstall all appsuites packages.
+# './Uninstall ^' or './Uninstall \*' will run
+# 'python -m pip uninstall <list of projects in appsuites>'
+# to uninstall the projects.
+# './Uninstall 3 ^' or './Uninstall 3 \*' will run
+# 'python3 -m pip uninstall <list of projects in appsuites>'
+# to uninstall the projects.
+# './Uninstall 3.10 pgn_read' will run
+# 'python3.10 -m pip uninstall pgn_read'
+# to uninstall pgn_read.
+export projects='chesscalc
+                 chessql
+                 chessresults
+                 chesssubmit
+                 chesstab
+                 chesstabular
+                 chessvalidate
+                 ecfformat
+                 emailextract
+                 emailstore
+                 pgn_read
+                 solentware_base
+                 solentware_grid
+                 solentware_misc
+                 uci_net'
+if test "$2" == ''; then
+    if test "$1" == ''; then
+        python_version=''
+        uninstall=''
+    else
+        python_version=''
+        uninstall=$1
+    fi
+else
+    python_version=$1
+    uninstall=$2
+fi
+if test "$uninstall" == ""; then
+    echo "Synopsis './Uninstall [python version] ''|^|\*'"
+elif test "$uninstall" == \* -o "$uninstall" == ^; then
+    echo "python$python_version -m pip uninstall $projects"
+    python$python_version -m pip uninstall $projects
+else
+    for project in $projects;
+    do
+        if test $uninstall == $project; then
+            echo "python$python_version -m pip uninstall $project"
+            python$python_version -m pip uninstall $project
+        fi
+    done
+fi
