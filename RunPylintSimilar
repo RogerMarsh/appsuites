@@ -1,0 +1,37 @@
+# './RunPylintSimilar ^' or './RunPylintSimilar \*' will run
+# 'pylint --disable=all --enable=similarities --ignore tests'
+# on all project directories in the current working directory.
+# './RunPylintSimilar chesstab' will run this on the chesstab project
+# directory in the current working directory.
+export projects='chesscalc
+                 chessql
+                 chessresults
+                 chesssubmit
+                 chesstab
+                 chesstabular
+                 chessvalidate
+                 ecfformat
+                 emailextract
+                 emailstore
+                 pgn_read
+                 solentware_base
+                 solentware_grid
+                 solentware_misc
+                 uci_net'
+for environment in _runpylintsimilar;
+do
+    mkdir $environment;
+    for project in $projects;
+    do
+        ln -s $PWD/$project/$project $environment;
+    done
+    export PYTHONPATH=$PWD/$environment;
+    for project in $projects;
+    do
+        if test "$1" == $project -o "$1" == \* -o "$1" == ^; then
+            echo "Run pylint similarities on $project"
+            pylint --disable=all --enable=similarities --ignore tests $project/$project
+        fi
+    done
+    rm -r $environment
+done
