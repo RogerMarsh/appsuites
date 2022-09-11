@@ -34,7 +34,7 @@ do
             echo "Run linters on $project"
             if test "$2" == "pylint" -o "$2" == ""; then
                 echo "pylint"
-                pylint --disable=similarities --reports=y --ignore tests $project/$project
+                pylint --rcfile=$project/pylint/pylint.conf $project/$project
             fi
             if test "$2" == "pycodestyle" -o "$2" == ""; then
                 echo "pycodestyle"
