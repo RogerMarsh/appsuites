@@ -1,5 +1,5 @@
 # './RunPylintSimilar ^' or './RunPylintSimilar \*' will run
-# 'pylint --disable=all --enable=similarities --ignore tests'
+# 'pylint --persistent=no --disable=all --enable=similarities --ignore tests'
 # on all project directories in the current working directory.
 # './RunPylintSimilar chesstab' will run this on the chesstab project
 # directory in the current working directory.
@@ -30,7 +30,7 @@ do
     do
         if test "$1" == $project -o "$1" == \* -o "$1" == ^; then
             echo "Run pylint similarities on $project"
-            pylint --disable=all --enable=similarities --ignore tests $project/$project
+            pylint --persistent=no --disable=all --enable=similarities --ignore tests $project/$project
         fi
     done
     rm -r $environment
