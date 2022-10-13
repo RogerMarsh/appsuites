@@ -1,0 +1,10 @@
+# './StoreEmail' will do 'python -m emailstore.emailstore'
+# './StoreEmail 3.6' will do 'python3.6 -m emailstore.emailstore'
+mkdir _runstoreemail
+ln -s $PWD/emailstore/emailstore _runstoreemail
+ln -s $PWD/solentware_misc/solentware_misc _runstoreemail
+cd _runstoreemail
+python$1 -m emailstore.emailstore
+cd ..
+rm -r _runstoreemail
+

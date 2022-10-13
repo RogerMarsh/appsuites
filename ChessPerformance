@@ -1,0 +1,10 @@
+# './ChessPerformance' will do 'python -m chesscalc.calculate'
+# './ChessPerformance 3.6' will do 'python3.6 -m chesscalc.calculate'
+mkdir _runchessperformance
+ln -s $PWD/chesscalc/chesscalc _runchessperformance
+ln -s $PWD/solentware_misc/solentware_misc _runchessperformance
+cd _runchessperformance
+python$1 -m chesscalc.calculate
+cd ..
+rm -r _runchessperformance
+
