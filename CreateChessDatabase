@@ -5,6 +5,7 @@
 mkdir _runcreatechessdatabase
 ln -s $PWD/chesstab/chesstab _runcreatechessdatabase
 ln -s $PWD/solentware_base/solentware_base _runcreatechessdatabase
+ln -s $PWD/solentware_bind/solentware_bind _runcreatechessdatabase
 cd _runcreatechessdatabase
 python$1 -m chesstab.tools.create_chesstab_database
 cd ..

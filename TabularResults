@@ -8,6 +8,7 @@ ln -s $PWD/ecfformat/ecfformat _runtabularresults
 ln -s $PWD/emailextract/emailextract _runtabularresults
 ln -s $PWD/emailstore/emailstore _runtabularresults
 ln -s $PWD/solentware_base/solentware_base _runtabularresults
+ln -s $PWD/solentware_bind/solentware_bind _runtabularresults
 ln -s $PWD/solentware_grid/solentware_grid _runtabularresults
 ln -s $PWD/solentware_misc/solentware_misc _runtabularresults
 cd _runtabularresults

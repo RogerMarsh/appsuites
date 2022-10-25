@@ -7,6 +7,7 @@ ln -s $PWD/chessresults/chessresults _runupgradecresults
 #ln -s $PWD/emailextract/emailextract _runupgradecresults
 #ln -s $PWD/emailstore/emailstore _runupgradecresults
 ln -s $PWD/solentware_base/solentware_base _runupgradecresults
+ln -s $PWD/solentware_bind/solentware_bind _runupgradecresults
 ln -s $PWD/solentware_grid/solentware_grid _runupgradecresults
 ln -s $PWD/solentware_misc/solentware_misc _runupgradecresults
 cd _runupgradecresults

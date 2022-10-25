@@ -20,6 +20,7 @@ export projects='chesscalc
                  emailstore
                  pgn_read
                  solentware_base
+                 solentware_bind
                  solentware_grid
                  solentware_misc
                  uci_net'

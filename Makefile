@@ -28,6 +28,7 @@ unix:	build-unix
 build-windows:
 ### Distributions built with 'python -m build ...' on Windows
 	cd solentware_base; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
+	cd solentware_bind; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
 	cd chesscalc; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
 	cd chesstab; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
 	cd chessql; make -f ../MakeSubdir build-windows $(PYTHON_SETTINGS)
@@ -46,6 +47,7 @@ build-windows:
 build-unix:
 ### Distributions built with 'python -m build ...' on Unix
 	cd solentware_base; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd solentware_bind; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd chesscalc; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd chesstab; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd chessql; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
@@ -64,6 +66,7 @@ build-unix:
 setup-windows:
 ### Source distributions built with 'python setup.py ...' on Unix
 	cd solentware_base; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
+	cd solentware_bind; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
 	cd chesscalc; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
 	cd chesstab; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
 	cd chessql; make -f ../MakeSubdir setup-windows $(PYTHON_SETTINGS)
@@ -82,6 +85,7 @@ setup-windows:
 setup-unix:
 ### Source distributions built with 'python setup.py ...' on Unix
 	cd solentware_base; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
+	cd solentware_bind; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
 	cd chesscalc; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
 	cd chesstab; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)
 	cd chessql; make -f ../MakeSubdir setup-unix $(PYTHON_SETTINGS)

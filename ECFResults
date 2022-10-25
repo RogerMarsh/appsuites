@@ -9,6 +9,7 @@ ln -s $PWD/ecfformat/ecfformat _runecfresults
 ln -s $PWD/emailextract/emailextract _runecfresults
 ln -s $PWD/emailstore/emailstore _runecfresults
 ln -s $PWD/solentware_base/solentware_base _runecfresults
+ln -s $PWD/solentware_bind/solentware_bind _runecfresults
 ln -s $PWD/solentware_grid/solentware_grid _runecfresults
 ln -s $PWD/solentware_misc/solentware_misc _runecfresults
 cd _runecfresults

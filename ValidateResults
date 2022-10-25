@@ -7,6 +7,7 @@ ln -s $PWD/chessvalidate/chessvalidate _runvalidateresults
 ln -s $PWD/emailextract/emailextract _runvalidateresults
 ln -s $PWD/emailstore/emailstore _runvalidateresults
 ln -s $PWD/solentware_base/solentware_base _runvalidateresults
+ln -s $PWD/solentware_bind/solentware_bind _runvalidateresults
 ln -s $PWD/solentware_grid/solentware_grid _runvalidateresults
 ln -s $PWD/solentware_misc/solentware_misc _runvalidateresults
 cd _runvalidateresults

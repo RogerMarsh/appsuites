@@ -5,6 +5,7 @@ mkdir _runupgradectab
 ln -s $PWD/chesstab/chesstab _runupgradectab
 #ln -s $PWD/pgn_read/pgn_read _runupgradectab
 ln -s $PWD/solentware_base/solentware_base _runupgradectab
+ln -s $PWD/solentware_bind/solentware_bind _runupgradectab
 ln -s $PWD/solentware_grid/solentware_grid _runupgradectab
 ln -s $PWD/solentware_misc/solentware_misc _runupgradectab
 #ln -s $PWD/uci_net/uci_net _runupgradectab

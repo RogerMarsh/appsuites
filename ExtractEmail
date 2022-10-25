@@ -2,6 +2,7 @@
 # './ExtractEmail 3.6' will do 'python3.6 -m emailextract.emailextract'
 mkdir _runextractemail
 ln -s $PWD/emailextract/emailextract _runextractemail
+ln -s $PWD/solentware_bind/solentware_bind _runextractemail
 ln -s $PWD/solentware_misc/solentware_misc _runextractemail
 cd _runextractemail
 python$1 -m emailextract.emailextract

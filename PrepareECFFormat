@@ -3,6 +3,7 @@
 #                  'python3.6 -m chessresults.prepare_ecf_format'
 mkdir _runprepareecfformat
 ln -s $PWD/chessresults/chessresults _runprepareecfformat
+ln -s $PWD/solentware_bind/solentware_bind _runprepareecfformat
 ln -s $PWD/solentware_misc/solentware_misc _runprepareecfformat
 cd _runprepareecfformat
 python$1 -m chessresults.prepare_ecf_format

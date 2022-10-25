@@ -2,6 +2,7 @@
 # './StoreEmail 3.6' will do 'python3.6 -m emailstore.emailstore'
 mkdir _runstoreemail
 ln -s $PWD/emailstore/emailstore _runstoreemail
+ln -s $PWD/solentware_bind/solentware_bind _runstoreemail
 ln -s $PWD/solentware_misc/solentware_misc _runstoreemail
 cd _runstoreemail
 python$1 -m emailstore.emailstore

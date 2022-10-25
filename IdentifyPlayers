@@ -2,6 +2,7 @@
 # './IdentifyPlayers 3.6' will do 'python3.6 -m chessresults.identify'
 mkdir _runidentifyplayers
 ln -s $PWD/chessresults/chessresults _runidentifyplayers
+ln -s $PWD/solentware_bind/solentware_bind _runidentifyplayers
 ln -s $PWD/solentware_misc/solentware_misc _runidentifyplayers
 cd _runidentifyplayers
 python$1 -m chessresults.identify
