@@ -2,13 +2,13 @@
 # compatible packages.
 # It is best to uninstall these packages, from '--user' location, first.
 # './Install ^' or './Install \*' will run
-# 'python -m pip install --user -f dist chessresults chesstab chesssubmit chesstabular'
+# 'python -m pip install --user --no-index -f dist chessresults chesstab chesssubmit chesstabular'
 # to install chessresults, chesstab, chesssubmit, and chesstabular.
 # './Install 3 pgn_read' will run
-# 'python3 -m pip install --user -f dist pgn_read'
+# 'python3 -m pip install --user --no-index -f dist pgn_read'
 # to install pgn_read.
 # './Install 3.10 pgn_read' will run
-# 'python3.10 -m pip install --user -f dist pgn_read'
+# 'python3.10 -m pip install --user --no-index -f dist pgn_read'
 # to install pgn_read.
 export projects='chesscalc
                  chessql
@@ -41,14 +41,14 @@ fi
 if test "$install" == ""; then
     echo "Synopsis './Install [python version] <project>|^|\*'"
 elif test "$install" == \* -o "$install" == ^; then
-    echo "python$python_version -m pip install --user -f dist chessresults chesstab chesssubmit chesstabular"
-    python$python_version -m pip install --user -f dist chessresults chesstab chesssubmit chesstabular
+    echo "python$python_version -m pip install --user --no-index -f dist chessresults chesstab chesssubmit chesstabular"
+    python$python_version -m pip install --user --no-index -f dist chessresults chesstab chesssubmit chesstabular
 else
     for project in $projects;
     do
         if test $install == $project; then
-            echo "python$python_version -m pip install --user -f dist $project"
-            python$python_version -m pip install --user -f dist $project
+            echo "python$python_version -m pip install --user --no-index -f dist $project"
+            python$python_version -m pip install --user --no-index -f dist $project
         fi
     done
 fi

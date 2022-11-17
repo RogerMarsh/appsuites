@@ -1,0 +1,21 @@
+# './Unittests' will create directories suitable for running all unittests
+# in the _unittests directory.
+# The _unittests directory has to be deleted manually after required tests
+# have been done.
+mkdir _unittests
+ln -s $PWD/chessql/chessql _unittests
+ln -s $PWD/chesstab/chesstab _unittests
+ln -s $PWD/pgn_read/pgn_read _unittests
+ln -s $PWD/solentware_base/solentware_base _unittests
+ln -s $PWD/solentware_bind/solentware_bind _unittests
+ln -s $PWD/solentware_grid/solentware_grid _unittests
+ln -s $PWD/solentware_misc/solentware_misc _unittests
+ln -s $PWD/uci_net/uci_net _unittests
+ln -s $PWD/chesscalc/chesscalc _unittests
+ln -s $PWD/chessvalidate/chessvalidate _unittests
+ln -s $PWD/chessresults/chessresults _unittests
+ln -s $PWD/ecfformat/ecfformat _unittests
+ln -s $PWD/emailextract/emailextract _unittests
+ln -s $PWD/emailstore/emailstore _unittests
+cd _unittests
+
