@@ -1,8 +1,8 @@
 ### Makefile to build source and wheel distributions on Windows or Unix platforms.
 
 PATH_TO_PYTHON ?= C:/Users/$(USERNAME)/AppData/Local/Programs/Python
-PYTHON_VERSION ?= 39-64
-PYTHON_VERSION_UNIX ?= 3.9
+PYTHON_VERSION ?= 310-64
+PYTHON_VERSION_UNIX ?= 3.10
 SDIST_FORMATS ?= gztar
 DIST_DIR ?= ../dist
 
