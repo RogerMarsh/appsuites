@@ -1,0 +1,17 @@
+# './ChessGames' will do 'python -m chesstab.chessgames'
+# './ChessGames 3.6' will do 'python3.6 -m chesstab.chessgames'
+# $2 is argument to switch NoSQL engines on.
+mkdir _runchessgames
+ln -s $PWD/chessql/chessql _runchessgames
+ln -s $PWD/chesstab/chesstab _runchessgames
+ln -s $PWD/pgn_read/pgn_read _runchessgames
+ln -s $PWD/solentware_base/solentware_base _runchessgames
+ln -s $PWD/solentware_bind/solentware_bind _runchessgames
+ln -s $PWD/solentware_grid/solentware_grid _runchessgames
+ln -s $PWD/solentware_misc/solentware_misc _runchessgames
+ln -s $PWD/uci_net/uci_net _runchessgames
+cd _runchessgames
+LD_PRELOAD=/usr/local/lib/libtcl86.so.1.13 python$1 -m chesstab.chessgames $1 $2
+cd ..
+rm -r _runchessgames
+

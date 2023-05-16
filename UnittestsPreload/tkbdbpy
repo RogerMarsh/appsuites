@@ -1,0 +1,1 @@
+LD_PRELOAD=/usr/local/lib/libtcl86.so.1.13 python3.9 -m solentware_base.core.tests.test__db_tkinter

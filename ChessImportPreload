@@ -1,0 +1,16 @@
+# './ChessImport' will do 'python -m chesstab.samples.dbtkinterdu_file'
+# './ChessImport 3.6' will do 'python3.6 -m chesstab.samples.dbtkinterdu_file'
+mkdir _runchessimport
+ln -s $PWD/chessql/chessql _runchessimport
+ln -s $PWD/chesstab/chesstab _runchessimport
+ln -s $PWD/pgn_read/pgn_read _runchessimport
+ln -s $PWD/solentware_base/solentware_base _runchessimport
+ln -s $PWD/solentware_bind/solentware_bind _runchessimport
+ln -s $PWD/solentware_grid/solentware_grid _runchessimport
+ln -s $PWD/solentware_misc/solentware_misc _runchessimport
+ln -s $PWD/uci_net/uci_net _runchessimport
+cd _runchessimport
+LD_PRELOAD=/usr/local/lib/libtcl86.so.1.13 python$1 -m chesstab.samples.dbtkinterdu_dir $1
+cd ..
+rm -r _runchessimport
+

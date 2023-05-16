@@ -1,0 +1,19 @@
+# './OGDResults' will do 'python -m chessresults.results_ogd'
+# './OGDResults 3.6' will do 'python3.6 -m chessresults.results_ogd'
+# $2 is argument to switch NoSQL engines on.
+mkdir _runogdresults
+ln -s $PWD/chesscalc/chesscalc _runogdresults
+ln -s $PWD/chessvalidate/chessvalidate _runogdresults
+ln -s $PWD/chessresults/chessresults _runogdresults
+ln -s $PWD/ecfformat/ecfformat _runogdresults
+ln -s $PWD/emailextract/emailextract _runogdresults
+ln -s $PWD/emailstore/emailstore _runogdresults
+ln -s $PWD/solentware_base/solentware_base _runogdresults
+ln -s $PWD/solentware_bind/solentware_bind _runogdresults
+ln -s $PWD/solentware_grid/solentware_grid _runogdresults
+ln -s $PWD/solentware_misc/solentware_misc _runogdresults
+cd _runogdresults
+LD_PRELOAD=/usr/local/lib/libtcl86.so.1.13 python$1 -m chessresults.results_ogd $1 $2
+cd ..
+rm -r _runogdresults
+
