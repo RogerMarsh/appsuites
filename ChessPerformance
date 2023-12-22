@@ -1,11 +1,15 @@
 # './ChessPerformance' will do 'python -m chesscalc.calculate'
 # './ChessPerformance 3.6' will do 'python3.6 -m chesscalc.calculate'
+# $2 is argument to switch NoSQL engines on.
 mkdir _runchessperformance
 ln -s $PWD/chesscalc/chesscalc _runchessperformance
+ln -s $PWD/solentware_base/solentware_base _runchessperformance
+ln -s $PWD/solentware_grid/solentware_grid _runchessperformance
 ln -s $PWD/solentware_bind/solentware_bind _runchessperformance
 ln -s $PWD/solentware_misc/solentware_misc _runchessperformance
+ln -s $PWD/pgn_read/pgn_read _runchessperformance
 cd _runchessperformance
-python$1 -m chesscalc.calculate
+python$1 -m chesscalc.calculate $2
 cd ..
 rm -r _runchessperformance
 

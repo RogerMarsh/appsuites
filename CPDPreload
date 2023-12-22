@@ -1,0 +1,14 @@
+# './CPDPreload' will do
+# 'LD_PRELOAD=... python -m chesscalc.tools.create_chesscalc_database'
+# './CPDPreload 3.6' will do
+# 'LD_PRELOAD=... python3.6 -m chesscalc.tools.create_chesscalc_database'
+mkdir _runcreateperfdatabase
+ln -s $PWD/chesscalc/chesscalc _runcreateperfdatabase
+ln -s $PWD/solentware_base/solentware_base _runcreateperfdatabase
+ln -s $PWD/solentware_bind/solentware_bind _runcreateperfdatabase
+ln -s $PWD/solentware_misc/solentware_misc _runcreateperfdatabase
+cd _runcreateperfdatabase
+LD_PRELOAD=/usr/local/lib/libtcl86.so.1.13 python$1 -m chesscalc.tools.create_chesscalc_database
+cd ..
+rm -r _runcreateperfdatabase
+

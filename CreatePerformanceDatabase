@@ -1,0 +1,13 @@
+# './CreatePerformanceDatabase' will do
+# 'python -m chesscalc.tools.create_chesscalc_database'
+# './CreatePerformanceDatabase 3.6' will do
+# 'python3.6 -m chesscalc.tools.create_chesscalc_database'
+mkdir _runcreateperfdatabase
+ln -s $PWD/chesscalc/chesscalc _runcreateperfdatabase
+ln -s $PWD/solentware_base/solentware_base _runcreateperfdatabase
+ln -s $PWD/solentware_bind/solentware_bind _runcreateperfdatabase
+cd _runcreateperfdatabase
+python$1 -m chesscalc.tools.create_chesscalc_database
+cd ..
+rm -r _runcreateperfdatabase
+

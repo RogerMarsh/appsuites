@@ -1,5 +1,6 @@
-# './ChessImport' will do 'python -m chesstab.samples.dbtkinterdu_file'
+# './ChessImport' will do 'python -m chesstab.samples.dbtkinterdu_file' and
 # './ChessImport 3.6' will do 'python3.6 -m chesstab.samples.dbtkinterdu_file'
+# both with LD_PRELOAD=/usr/local/lib/libtcl86.so.1.13 prefix.
 mkdir _runchessimport
 ln -s $PWD/chessql/chessql _runchessimport
 ln -s $PWD/chesstab/chesstab _runchessimport

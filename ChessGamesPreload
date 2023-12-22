@@ -1,6 +1,7 @@
-# './ChessGames' will do 'python -m chesstab.chessgames'
-# './ChessGames 3.6' will do 'python3.6 -m chesstab.chessgames'
-# $2 is argument to switch NoSQL engines on.
+# './ChessGamesPreload' will do 'python -m chesstab.chessgames allow_tcl' and
+# './ChessGamesPreload 3.6' will do 'python3.6 -m chesstab.chessgames allow_tcl'
+# both with LD_PRELOAD=/usr/local/lib/libtcl86.so.1.13 prefix.
+# allow_tcl is argument to switch tcl interface to Berkeley DB on.
 mkdir _runchessgames
 ln -s $PWD/chessql/chessql _runchessgames
 ln -s $PWD/chesstab/chesstab _runchessgames
@@ -11,7 +12,7 @@ ln -s $PWD/solentware_grid/solentware_grid _runchessgames
 ln -s $PWD/solentware_misc/solentware_misc _runchessgames
 ln -s $PWD/uci_net/uci_net _runchessgames
 cd _runchessgames
-LD_PRELOAD=/usr/local/lib/libtcl86.so.1.13 python$1 -m chesstab.chessgames $1 $2
+LD_PRELOAD=/usr/local/lib/libtcl86.so.1.13 python$1 -m chesstab.chessgames allow_tcl
 cd ..
 rm -r _runchessgames
 

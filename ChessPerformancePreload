@@ -1,0 +1,16 @@
+# './ChessPerformancePreload' will do
+# 'python -m chesscalc.calculate allow_tcl' and
+# './ChessPerformancePreload 3.6' will do
+# 'python3.6 -m chesscalc.calculate allow_tcl'
+# both with LD_PRELOAD=/usr/local/lib/libtcl86.so.1.13 prefix.
+# allow_tcl is argument to switch tcl interface to Berkeley DB on.
+mkdir _runchessperformance
+ln -s $PWD/chesscalc/chesscalc _runchessperformance
+ln -s $PWD/solentware_base/solentware_base _runchessperformance
+ln -s $PWD/solentware_bind/solentware_bind _runchessperformance
+ln -s $PWD/solentware_misc/solentware_misc _runchessperformance
+cd _runchessperformance
+LD_PRELOAD=/usr/local/lib/libtcl86.so.1.13 python$1 -m chesscalc.calculate allow_tcl
+cd ..
+rm -r _runchessperformance
+

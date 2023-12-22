@@ -11,7 +11,7 @@ ln -s $PWD/solentware_grid/solentware_grid _runchessgames
 ln -s $PWD/solentware_misc/solentware_misc _runchessgames
 ln -s $PWD/uci_net/uci_net _runchessgames
 cd _runchessgames
-python$1 -m chesstab.chessgames $1 $2
+python$1 -m chesstab.chessgames $2
 cd ..
 rm -r _runchessgames
 
