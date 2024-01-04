@@ -7,7 +7,7 @@
 mkdir _runchessperformance
 ln -s $PWD/chesscalc/chesscalc _runchessperformance
 ln -s $PWD/solentware_base/solentware_base _runchessperformance
-ln -s $PWD/solentware_base/solentware_grid _runchessperformance
+ln -s $PWD/solentware_grid/solentware_grid _runchessperformance
 ln -s $PWD/solentware_bind/solentware_bind _runchessperformance
 ln -s $PWD/solentware_misc/solentware_misc _runchessperformance
 ln -s $PWD/pgn_read/pgn_read _runchessperformance
