@@ -1,15 +1,13 @@
-# './CRDPreload' will do
-# preload of libtcl86.so.1.13 before
+# './CreateReportsDatabase' will do
 # 'python -m chessreports.tools.create_chessreports_database'
-# './CRDPreload 3.6' will do
-# preload of libtcl86.so.1.13 before
+# './CreateReportsDatabase 3.6' will do
 # 'python3.6 -m chessreports.tools.create_chessreports_database'
 mkdir _runcreatereportsdatabase
 ln -s $PWD/chessreports/chessreports _runcreatereportsdatabase
 ln -s $PWD/solentware_base/solentware_base _runcreatereportsdatabase
 ln -s $PWD/solentware_bind/solentware_bind _runcreatereportsdatabase
 cd _runcreatereportsdatabase
-LD_PRELOAD=/usr/local/lib/libtcl86.so.1.13 python$1 -m chessreports.tools.create_chessreports_database
+python$1 -m chessreports.tools.create_chessreports_database
 cd ..
 rm -r _runcreatereportsdatabase
 

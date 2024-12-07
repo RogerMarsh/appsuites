@@ -1,10 +1,10 @@
-# './ECFResults' will do 'python -m chessresults.results_ecf'
-# './ECFResults 3.6' will do 'python3.6 -m chessresults.results_ecf'
+# './ECFResults' will do 'python -m chessreports.results_ecf'
+# './ECFResults 3.6' will do 'python3.6 -m chessreports.results_ecf'
 # $2 is argument to switch NoSQL engines on.
 mkdir _runecfresults
 ln -s $PWD/chesscalc/chesscalc _runecfresults
 ln -s $PWD/chessvalidate/chessvalidate _runecfresults
-ln -s $PWD/chessresults/chessresults _runecfresults
+ln -s $PWD/chessreports/chessreports _runecfresults
 ln -s $PWD/ecfformat/ecfformat _runecfresults
 ln -s $PWD/emailextract/emailextract _runecfresults
 ln -s $PWD/emailstore/emailstore _runecfresults
@@ -13,7 +13,7 @@ ln -s $PWD/solentware_bind/solentware_bind _runecfresults
 ln -s $PWD/solentware_grid/solentware_grid _runecfresults
 ln -s $PWD/solentware_misc/solentware_misc _runecfresults
 cd _runecfresults
-python$1 -m chessresults.results_ecf $1 $2
+python$1 -m chessreports.results_ecf $1 $2
 cd ..
 rm -r _runecfresults
 

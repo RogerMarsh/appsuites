@@ -1,7 +1,7 @@
-# './IdentifyPlayers' will do 'python -m chessresults.identify'
-# './IdentifyPlayers 3.6' will do 'python3.6 -m chessresults.identify'
+# './IdentifyPlayers' will do 'python -m chessreports.identify'
+# './IdentifyPlayers 3.6' will do 'python3.6 -m chessreports.identify'
 mkdir _runidentifyplayers
-ln -s $PWD/chessresults/chessresults _runidentifyplayers
+ln -s $PWD/chessreports/chessreports _runidentifyplayers
 ln -s $PWD/solentware_bind/solentware_bind _runidentifyplayers
 ln -s $PWD/solentware_misc/solentware_misc _runidentifyplayers
 cd _runidentifyplayers

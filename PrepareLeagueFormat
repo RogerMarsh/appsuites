@@ -1,13 +1,13 @@
 # './PrepareLeagueFormat' will do
-#                  'python -m chessresults.prepare_league_format'
+#                  'python -m chessreports.prepare_league_format'
 # './PrepareLeagueFormat 3.6' will do
-#                  'python3.6 -m chessresults.prepare_league_format'
+#                  'python3.6 -m chessreports.prepare_league_format'
 mkdir _runprepareleagueformat
-ln -s $PWD/chessresults/chessresults _runprepareleagueformat
+ln -s $PWD/chessreports/chessreports _runprepareleagueformat
 ln -s $PWD/solentware_bind/solentware_bind _runprepareleagueformat
 ln -s $PWD/solentware_misc/solentware_misc _runprepareleagueformat
 cd _runprepareleagueformat
-python$1 -m chessresults.prepare_league_format
+python$1 -m chessreports.prepare_league_format
 cd ..
 rm -r _runprepareleagueformat
 

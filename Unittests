@@ -13,7 +13,7 @@ ln -s $PWD/solentware_misc/solentware_misc _unittests
 ln -s $PWD/uci_net/uci_net _unittests
 ln -s $PWD/chesscalc/chesscalc _unittests
 ln -s $PWD/chessvalidate/chessvalidate _unittests
-ln -s $PWD/chessresults/chessresults _unittests
+ln -s $PWD/chessreports/chessreports _unittests
 ln -s $PWD/ecfformat/ecfformat _unittests
 ln -s $PWD/emailextract/emailextract _unittests
 ln -s $PWD/emailstore/emailstore _unittests

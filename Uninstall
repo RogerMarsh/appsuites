@@ -10,7 +10,7 @@
 # to uninstall pgn_read.
 export projects='chesscalc
                  chessql
-                 chessresults
+                 chessreports
                  chesssubmit
                  chesstab
                  chesstabular

@@ -1,10 +1,10 @@
-# './DatabaseResults' will do 'python -m chessresults.results_database'
-# './DatabaseResults 3.6' will do 'python3.6 -m chessresults.results_database'
+# './DatabaseResults' will do 'python -m chessreports.results_database'
+# './DatabaseResults 3.6' will do 'python3.6 -m chessreports.results_database'
 # $2 is argument to switch NoSQL engines on.
 mkdir _rundatabaseresults
 ln -s $PWD/chesscalc/chesscalc _rundatabaseresults
 ln -s $PWD/chessvalidate/chessvalidate _rundatabaseresults
-ln -s $PWD/chessresults/chessresults _rundatabaseresults
+ln -s $PWD/chessreports/chessreports _rundatabaseresults
 ln -s $PWD/ecfformat/ecfformat _rundatabaseresults
 ln -s $PWD/emailextract/emailextract _rundatabaseresults
 ln -s $PWD/emailstore/emailstore _rundatabaseresults
@@ -13,7 +13,7 @@ ln -s $PWD/solentware_bind/solentware_bind _rundatabaseresults
 ln -s $PWD/solentware_grid/solentware_grid _rundatabaseresults
 ln -s $PWD/solentware_misc/solentware_misc _rundatabaseresults
 cd _rundatabaseresults
-python$1 -m chessresults.results_database $1 $2
+python$1 -m chessreports.results_database $1 $2
 cd ..
 rm -r _rundatabaseresults
 

@@ -1,10 +1,10 @@
-# './LiteResults' will do 'python -m chessresults.results_lite'
-# './LiteResults 3.6' will do 'python3.6 -m chessresults.results_lite'
+# './LiteResults' will do 'python -m chessreports.results_lite'
+# './LiteResults 3.6' will do 'python3.6 -m chessreports.results_lite'
 # $2 is argument to switch NoSQL engines on.
 mkdir _runliteresults
 ln -s $PWD/chesscalc/chesscalc _runliteresults
 ln -s $PWD/chessvalidate/chessvalidate _runliteresults
-ln -s $PWD/chessresults/chessresults _runliteresults
+ln -s $PWD/chessreports/chessreports _runliteresults
 ln -s $PWD/ecfformat/ecfformat _runliteresults
 ln -s $PWD/emailextract/emailextract _runliteresults
 ln -s $PWD/emailstore/emailstore _runliteresults

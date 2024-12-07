@@ -1,0 +1,17 @@
+# './UpgradeCReports' will do 'python -m chessreports.tools.upgrade_3_to_4'
+# './UpgradeCReports 3.6' will do:
+    'python3.6 -m chessreports.tools.upgrade_3_to_4'
+mkdir _runupgradecreports
+#ln -s $PWD/chesscalc/chesscalc _runupgradecreports
+ln -s $PWD/chessreports/chessreports _runupgradecreports
+#ln -s $PWD/emailextract/emailextract _runupgradecreports
+#ln -s $PWD/emailstore/emailstore _runupgradecreports
+ln -s $PWD/solentware_base/solentware_base _runupgradecreports
+ln -s $PWD/solentware_bind/solentware_bind _runupgradecreports
+ln -s $PWD/solentware_grid/solentware_grid _runupgradecreports
+ln -s $PWD/solentware_misc/solentware_misc _runupgradecreports
+cd _runupgradecreports
+python$1 -m chessreports.tools.upgrade_3_to_4
+cd ..
+rm -r _runupgradecreports
+

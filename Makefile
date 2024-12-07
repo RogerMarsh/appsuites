@@ -37,7 +37,7 @@ unix:
 	cd emailstore; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd emailextract; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd pgn_read; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd chessresults; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+	cd chessreports; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd chesssubmit; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd chesstabular; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd chessvalidate; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)

@@ -7,7 +7,7 @@
 # project directory in the current working directory.
 export projects='chesscalc
                  chessql
-                 chessresults
+                 chessreports
                  chesssubmit
                  chesstab
                  chesstabular
