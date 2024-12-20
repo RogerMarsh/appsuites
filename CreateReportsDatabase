@@ -1,0 +1,13 @@
+# './CreateReportsDatabase' will do
+# 'python -m chessreports.tools.create_chessreports_database'
+# './CreateReportsDatabase 3.6' will do
+# 'python3.6 -m chessreports.tools.create_chessreports_database'
+mkdir _runcreatereportsdatabase
+ln -s $PWD/chessreports/chessreports _runcreatereportsdatabase
+ln -s $PWD/solentware_base/solentware_base _runcreatereportsdatabase
+ln -s $PWD/solentware_bind/solentware_bind _runcreatereportsdatabase
+cd _runcreatereportsdatabase
+python$1 -m chessreports.tools.create_chessreports_database
+cd ..
+rm -r _runcreatereportsdatabase
+
