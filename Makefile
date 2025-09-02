@@ -33,7 +33,6 @@ unix:
 	cd solentware_bind; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd chesscalc; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd chesstab; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd chesstagcql; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd chessql; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd emailstore; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 	cd emailextract; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
