@@ -13,7 +13,7 @@ ln -s $PWD/solentware_bind/solentware_bind _runliteresults
 ln -s $PWD/solentware_grid/solentware_grid _runliteresults
 ln -s $PWD/solentware_misc/solentware_misc _runliteresults
 cd _runliteresults
-python$1 -m chessresults.results_lite $1 $2
+python$1 -m chessreports.results_lite $1 $2
 cd ..
 rm -r _runliteresults
 
