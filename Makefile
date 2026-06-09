@@ -18,34 +18,79 @@ DIST_DIR ?= ../dist
 
 PYTHON_SETTINGS += PYTHON_VERSION_UNIX=$(PYTHON_VERSION_UNIX)
 PYTHON_SETTINGS += DIST_DIR=$(DIST_DIR)
+MAKESUBDIR = make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
 
 # Targets
 
 .PHONY : all unix windows
+.PHONY : chesstab chessql pgn_read uci_net
+.PHONY : chesscalc
+.PHONY : emailextract emailstore
+.PHONY : ecfformat chessreports chesssubmit chesstabular chessvalidate
+.PHONY : solentware_base solentware_bind solentware_grid solentware_misc
 
 all:
-	@echo "Use target unix on a Unix platform for Unix build"
-	@echo "Use 'nmake -f Nmakefile' in a VS Developer Command Prompt for native MS Windows build"
+	@echo "Use target unix on a Unix platform to build all packages."
+	@echo "Use target <package directory> on a Unix platform to build"
+	@echo "package.  For example 'make solentware_base'."
+	@echo "Use 'nmake -f Nmakefile' in a VS Developer Command Prompt"
+	@echo "for native MS Windows build of all packages."
 	@echo "(Nmakefile not yet implemented)"
 
-unix:
-	cd solentware_base; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd solentware_bind; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd chesscalc; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd chesstab; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd chessql; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd emailstore; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd emailextract; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd pgn_read; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd chessreports; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd chesssubmit; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd chesstabular; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd chessvalidate; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd ecfformat; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd solentware_grid; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd solentware_misc; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
-	cd uci_net; make -f ../MakeSubdir build-unix $(PYTHON_SETTINGS)
+unix: solentware_base solentware_bind chesscalc chesstab chessql \
+      emailstore emailextract pgn_read chessreports chesssubmit \
+      chesstabular chessvalidate ecfformat solentware_grid \
+      solentware_misc uci_net
+
+solentware_base:
+	cd $@; $(MAKESUBDIR)
+
+solentware_bind:
+	cd $@; $(MAKESUBDIR)
+
+chesscalc:
+	cd $@; $(MAKESUBDIR)
+
+chesstab:
+	cd $@; $(MAKESUBDIR)
+
+chessql:
+	cd $@; $(MAKESUBDIR)
+
+emailstore:
+	cd $@; $(MAKESUBDIR)
+
+emailextract:
+	cd $@; $(MAKESUBDIR)
+
+pgn_read:
+	cd $@; $(MAKESUBDIR)
+
+chessreports:
+	cd $@; $(MAKESUBDIR)
+
+chesssubmit:
+	cd $@; $(MAKESUBDIR)
+
+chesstabular:
+	cd $@; $(MAKESUBDIR)
+
+chessvalidate:
+	cd $@; $(MAKESUBDIR)
+
+ecfformat:
+	cd $@; $(MAKESUBDIR)
+
+solentware_grid:
+	cd $@; $(MAKESUBDIR)
+
+solentware_misc:
+	cd $@; $(MAKESUBDIR)
+
+uci_net:
+	cd $@; $(MAKESUBDIR)
 
 windows:
-	@echo "Use 'nmake -f Nmakefile' in a VS Developer Command Prompt for native MS Windows build"
+	@echo "Use 'nmake -f Nmakefile' in a VS Developer Command Prompt"
+	@echo "for native MS Windows build of all packages."
 	@echo "(Nmakefile not yet implemented)"
